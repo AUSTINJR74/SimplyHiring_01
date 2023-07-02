@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="dropdown-card">
+          <button class="dropdown-btn" onclick="toggleDropdown()">Location</button>
+          <div class="dropdown-content" id="location-dropdown">
+            <a href="#">New York</a>
+            <a href="#">London</a>
+            <a href="#">Tokyo</a>
+            <!-- Add more location options here -->
+          </div>
+        </div>
+        <div class="dropdown-card">
+          <button class="dropdown-btn" onclick="toggleDropdown()">Job Role</button>
+          <div class="dropdown-content" id="jobrole-dropdown">
+            <a href="#">Software Engineer</a>
+            <a href="#">Data Analyst</a>
+            <a href="#">Marketing Manager</a>
+            <!-- Add more job role options here -->
+          </div>
+        </div>
+        <input type="text" id="search-input" placeholder="Enter keywords...">
+        <button id="search-button" onclick="performSearch()">Search</button>
+      </div>
+</body>
+
+<script>
+    function toggleDropdown() {
+  event.currentTarget.nextElementSibling.classList.toggle('show');
+}
+
+function performSearch() {
+  const keywords = document.getElementById('search-input').value;
+  const location = document.getElementById('location-dropdown').querySelector('a.active').textContent;
+  const jobRole = document.getElementById('jobrole-dropdown').querySelector('a.active').textContent;
+
+  // Perform search based on the selected location, job role, and keywords
+  // ...
+}
+
+</script>
+</html>

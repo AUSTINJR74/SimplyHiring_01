@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimplyHiring</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/3c29df6806.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    </head>
+  <body>
+
+    <!-- <div class="log">
+      <ul>
+        <button onclick="openPopup()">Log In</button>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <iframe src="SignIn.html" frameborder="0" width="100%" height="100%"></iframe>
+          </div>
+        </div>
+        <button onclick="openPopup()">Sign In</button>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <iframe src="SignIn.html" frameborder="0" width="100%" height="100%"></iframe>
+          </div>
+        </div>
+      </ul>
+    </div> -->
+
+    <header>
+      <div class="headerlogo">
+
+        <a href="#home"><img src="headerlogo.png" /></a>
+        
+      </div>
+      <div class="search">
+      <div class="searchicon"><a href="candidates.html"><i class="fas fa-search"></i> </a></div>
+      <input type="text" placeholder="Search for Job / Candidate" />
+      <select id="locations" onchange="filterCandidates()">
+        <option value="" disabled selected>Choose Location</option>
+        <option value="New York">New York</option>
+        <option value="London">London</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Boston">Boston</option>
+        <option value="Dallas">Dallas</option>
+        <option value="Miami">Miami</option>
+        <option value="Houston">Houston</option>
+        <option value="Vancouver">Vancouver</option>
+        <option value="Melbourne">Melbourne</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Dubai">Dubai</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Rome">Rome</option>
+        <option value="Sao Paulo">Sao Paulo</option>
+        <option value="Mexico City">Mexico City</option>
+        <option value="Seoul">Seoul</option>
+        <option value="Shanghai">Shanghai</option>
+        <option value="Moscow">Moscow</option>
+        <option value="Zurich">Zurich</option>
+        <option value="Vienna">Vienna</option>
+        <option value="Athens">Athens</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Prague">Prague</option>
+        <option value="Warsaw">Warsaw</option>
+        <option value="Oslo">Oslo</option>
+        <option value="Helsinki">Helsinki</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Lisbon">Lisbon</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Copenhagen">Copenhagen</option>
+        <option value="Brussels">Brussels</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Vienna">Vienna</option>
+        <option value="Prague">Prague</option>
+        <option value="Warsaw">Warsaw</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Cape Town">Cape Town</option>
+        <option value="Rio de Janeiro">Rio de Janeiro</option>
+        <option value="Bangkok">Bangkok</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Hong Kong">Hong Kong</option>
+        <!-- Add more locations as needed -->
+      </select>
+
+      <select id="job-roles" onchange="filterCandidates()">
+        <option value="" disabled selected>Choose Job Role</option>
+        <option value="Software Engineer">Software Engineer</option>
+        <option value="Web Developer">Web Developer</option>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="UI/UX Designer">UI/UX Designer</option>
+        <option value="Marketing Manager">Marketing Manager</option>
+        <option value="Project Manager">Project Manager</option>
+        <option value="Business Analyst">Business Analyst</option>
+        <option value="Product Manager">Product Manager</option>
+        <option value="Graphic Designer">Graphic Designer</option>
+        <option value="Accountant">Accountant</option>
+        <option value="Sales Representative">Sales Representative</option>
+        <option value="HR Manager">HR Manager</option>
+        <option value="Financial Analyst">Financial Analyst</option>
+        <option value="Content Writer">Content Writer</option>
+        <option value="Network Administrator">Network Administrator</option>
+        <option value="Database Administrator">Database Administrator</option>
+        <option value="Customer Service Representative">Customer Service Representative</option>
+        <option value="Quality Assurance Analyst">Quality Assurance Analyst</option>
+        <option value="Business Development Manager">Business Development Manager</option>
+        <option value="Operations Manager">Operations Manager</option>
+        <option value="Digital Marketing Specialist">Digital Marketing Specialist</option>
+        <option value="Software Architect">Software Architect</option>
+        <option value="Systems Analyst">Systems Analyst</option>
+        <option value="IT Support Specialist">IT Support Specialist</option>
+        <option value="Data Analyst">Data Analyst</option>
+        <option value="Technical Writer">Technical Writer</option>
+        <option value="Network Engineer">Network Engineer</option>
+        <option value="DevOps Engineer">DevOps Engineer</option>
+        <option value="UX Researcher">UX Researcher</option>
+        <option value="Front-end Developer">Front-end Developer</option>
+        <option value="Back-end Developer">Back-end Developer</option>
+      </select>
+      
+      
+    
+    </div>
+      <ul class="navlist">
+        <li><a href="#home">Home</a><span>&#9629</span></li>
+        <li><a href="#features">Key Features</a><span>&#9629</span</li>
+          <li><a href="candidates.html">Candidates List</a><span>&#9629</span</li>
+        <li><a href="#about">About</a><span>&#9629</span</li>
+      </ul>
+      <div class="log navlist">
+        <button onclick="openPopup()">Log In <span>&#9629</span></button>
+          <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <iframe src="SignIn.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+          </div>
+
+        <button onclick="openPopup()">Sign In <span>&#9629</span></button>
+          <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <iframe src="SignIn.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-left">
+        <p>SimplyHiring - Your Gateway to Seamless Hiring</p>
+        <h1><span>TRANSFORM YOUR</span>RECRUITMENT STRATEGIES</h1>
+        <a href="#features">	&#10728;</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="card c1">
+        <div class="content">
+          <h1>01</h1>
+          <p class="heading">Expanded Talent Pool</p>
+          <p class="para">
+            Access a larger and
+            more diverse pool of talent. By leveraging digital platforms, you
+            can reach candidates from different locations, backgrounds, and
+            skill sets, giving you a broader range of qualified candidates to
+            choose from.
+          </p>
+          <!-- <button class="btn">Read more</button> -->
+        </div>
+      </div>
+
+      <div class="card c2">
+        <div class="content">
+          <h1>02</h1>
+          <p class="heading">Time, Cost Efficiency</p>
+          <p class="para">
+            Streamline the hiring process, saving
+            time and reducing costs. Automated job posting, candidate screening,
+            and applicant tracking systems eliminate manual administrative
+            tasks, allowing recruiters to focus on strategic activities and
+            shorten time-to-hire.
+          </p>
+          <!-- <button class="btn">Read more</button> -->
+        </div>
+      </div>
+
+      <div class="card c3">
+        <div class="content">
+          <h1>03</h1>
+          <p class="heading">Enhanced Candidate Experience</p>
+          <p class="para">
+            Provide a user-friendly and convenient
+            experience for candidates. They can easily search and apply for
+            jobs, track application statuses, and receive prompt communication
+            and updates. This improves the candidate experience, boosts your
+            employer brand, and increases the likelihood of attracting top
+            talent.
+          </p>
+          <!-- <button class="btn">Read more</button> -->
+        </div>
+      </div>
+
+      <div class="card c4">
+        <div class="content">
+          <h1>04</h1>
+          <p class="heading">Improved Hiring Accuracy</p>
+          <p class="para">
+            With advanced filtering and candidate matching capabilities, online
+            recruitment solutions help you find the most suitable candidates for
+            your job requirements. These systems analyze resumes and profiles,
+            match them against your job criteria, and provide recommendations,
+            enabling more accurate candidate shortlisting and selection.
+          </p>
+          <!-- <button class="btn">Read more</button> -->
+        </div>
+      </div>
+
+      <div class="card c5">
+        <div class="content">
+          <h1>05</h1>
+          <p class="heading">Data-Driven Decision Making</p>
+          <p class="para">
+            Offer robust analytics and reporting
+            features. By tracking and analyzing recruitment metrics such as
+            source of hire, time-to-fill, and cost per hire, you can gain
+            valuable insights into your hiring process. This data-driven
+            approach allows you to identify areas for improvement, optimize your
+            recruitment strategies, and make informed decisions.
+          </p>
+          <!-- <button class="btn">Read more</button> -->
+        </div>
+      </div>
+
+      <div class="card c6">
+        <div class="content">
+          <h1>06</h1>
+          <p class="heading">Scalability and Flexibility</p>
+          <p class="para">
+            Highly scalable and adaptable to
+            your organization's needs. Whether you're hiring for a small team or
+            scaling up for multiple positions across different locations, these
+            solutions can accommodate varying hiring volumes and cater to the
+            growth of your business. They can also be easily integrated with
+            existing HR systems or expanded to include additional features as
+            your recruitment needs evolve.
+          </p>
+          <!-- <button class="btn">Read more</button> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="aboutleft">
+        <img src="about2.png" alt="">
+        <div class="abouttext">
+        <h1>SimplyHiring</h1>
+        <p>SimplyHiring is a cutting-edge digital recruitment website that revolutionizes 
+          the way employers and job seekers connect. With its user-friendly interface and 
+          advanced features, SimplyHiring makes the process of finding and hiring top talent 
+          seamless and efficient.<p>
+
+          <p>At SimplyHiring, we understand the challenges faced by both employers and 
+          job seekers in today's competitive market. Our platform combines innovative technology 
+          with a human touch to provide a personalized and streamlined recruitment experience.</p>
+        </div>
+      </div>
+      </div>
+      <div class="aboutright">
+        <img src="about.png" alt="">
+    </section>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+
+    <script>
+      setTimeout(openPopup, 3000);
+
+
+        function openPopup() {
+      document.getElementById("popup").style.display = "block";
+      adjustPopupWidth(); // Adjust the pop-up width when opening
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    
+    // Close the pop-up
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+      document.removeEventListener("keydown", handleKeyDown);
+    }
+
+    // Adjust the pop-up width based on viewport size
+    function adjustPopupWidth() {
+      var popupContent = document.querySelector('.popup-content');
+      var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+      var widthPercentage = Math.min(59, viewportWidth * 0.9 / popupContent.offsetWidth * 100);
+      popupContent.style.width = widthPercentage + '%';
+    }
+
+    // Handle keydown event for "Esc" key
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        closePopup();
+      }
+    }
+
+    // Adjust the pop-up width on window resize
+    window.addEventListener('resize', adjustPopupWidth);
+    </script>
+
+    <script>
+      function showLocations() {
+  const select = document.getElementById("locations");
+  select.style.display = "block";
+}
+
+function filterCandidates() {
+  const select = document.getElementById("locations");
+  const selectedLocation = select.value.toLowerCase();
+  
+  const candidateCards = document.getElementsByClassName("candidate-card");
+  for (let card of candidateCards) {
+    const location = card.querySelector("p:nth-child(4)").textContent.toLowerCase();
+    
+    if (location.includes(selectedLocation)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  }
+}
+
+    </script>
+  </body>
+</html>

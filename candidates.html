@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidates List</title>
+    <link rel="stylesheet" href="candidates.css">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.html">
+</head> <script src="https://kit.fontawesome.com/3c29df6806.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+<body>
+    <header>
+        <div class="headerlogo">
+          <a href="index.html"><img src="headerlogo.png" /> </a>
+        </div>
+        <div class="search">
+        <div class="searchicon"><a href="#"><i class="fas fa-search"></i> </a></div>
+        <input type="text" id="search" placeholder="Search for Candidate" />
+      </div>
+        <ul>
+          <li><a href="index.html">Home</a><span>&#9629</span></li>
+        </ul>
+      </header>
+
+      <section class="candidates">
+        <div class="cdlists">
+            <div class="candidate-card">
+              <h3>Name: <span>John Doe</span></h3>
+              <p>Email: johndoe@example.com</p>
+              <p>Age: 32</p>
+              <p>Location: New York</p>
+              <p>Job: Software Engineer</p>
+              <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+            </div>
+            <div class="candidate-card">
+              <h3>Name: <span>Jane Smith</span></h3>
+              <p>Email: janesmith@example.com</p>
+              <p>Age: 28</p>
+              <p>Location: London</p>
+              <p>Job: Marketing Manager</p>
+              <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+            </div>
+            <div class="candidate-card">
+              <h3>Name: <span>Alex Johnson</span></h3>
+              <p>Email: alexjohnson@example.com</p>
+              <p>Age: 35</p>
+              <p>Location: San Francisco</p>
+              <p>Job: Data Scientist</p>
+              <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+            </div>
+            <div class="candidate-card">
+              <h3>Name: <span>Emily Davis</span></h3>
+              <p>Email: emilydavis@example.com</p>
+              <p>Age: 29</p>
+              <p>Location: Sydney</p>
+              <p>Job: Graphic Designer</p>
+              <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+            </div>
+            <div class="candidate-card">
+              <h3>Name: <span>Michael Brown</span></h3>
+              <p>Email: michaelbrown@example.com</p>
+              <p>Age: 31</p>
+              <p>Location: Toronto</p>
+              <p>Job: Project Manager</p>
+              <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+            </div>
+            <div class="candidate-card">
+                <h3>Name: <span>Sarah Johnson</span></h3>
+                <p>Email: sarahjohnson@example.com</p>
+                <p>Age: 27</p>
+                <p>Location: Los Angeles</p>
+                <p>Job: Graphic Designer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Michael Anderson</span></h3>
+                <p>Email: michaelanderson@example.com</p>
+                <p>Age: 33</p>
+                <p>Location: Chicago</p>
+                <p>Job: Sales Manager</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Lisa Brown</span></h3>
+                <p>Email: lisabrown@example.com</p>
+                <p>Age: 30</p>
+                <p>Location: San Francisco</p>
+                <p>Job: Product Manager</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>David Wilson</span></h3>
+                <p>Email: davidwilson@example.com</p>
+                <p>Age: 29</p>
+                <p>Location: London</p>
+                <p>Job: Software Developer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Jennifer Davis</span></h3>
+                <p>Email: jenniferdavis@example.com</p>
+                <p>Age: 31</p>
+                <p>Location: New York</p>
+                <p>Job: Marketing Specialist</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Andrew Thompson</span></h3>
+                <p>Email: andrewthompson@example.com</p>
+                <p>Age: 26</p>
+                <p>Location: Seattle</p>
+                <p>Job: Web Developer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Emily Wilson</span></h3>
+                <p>Email: emilywilson@example.com</p>
+                <p>Age: 29</p>
+                <p>Location: Melbourne</p>
+                <p>Job: HR Manager</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Christopher Lee</span></h3>
+                <p>Email: christopherlee@example.com</p>
+                <p>Age: 32</p>
+                <p>Location: Toronto</p>
+                <p>Job: Data Analyst</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Megan Martinez</span></h3>
+                <p>Email: meganmartinez@example.com</p>
+                <p>Age: 27</p>
+                <p>Location: Houston</p>
+                <p>Job: Financial Analyst</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Jonathan Harris</span></h3>
+                <p>Email: jonathanharris@example.com</p>
+                <p>Age: 30</p>
+                <p>Location: Berlin</p>
+                <p>Job: UX Designer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Joshua Smith</span></h3>
+                <p>Email: joshuasmith@example.com</p>
+                <p>Age: 28</p>
+                <p>Location: Sydney</p>
+                <p>Job: Business Analyst</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Amanda Taylor</span></h3>
+                <p>Email: amandataylor@example.com</p>
+                <p>Age: 31</p>
+                <p>Location: Vancouver</p>
+                <p>Job: Project Coordinator</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Robert Johnson</span></h3>
+                <p>Email: robertjohnson@example.com</p>
+                <p>Age: 29</p>
+                <p>Location: Chicago</p>
+                <p>Job: Software Engineer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Olivia Davis</span></h3>
+                <p>Email: oliviadavis@example.com</p>
+                <p>Age: 27</p>
+                <p>Location: London</p>
+                <p>Job: Marketing Specialist</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Daniel Wilson</span></h3>
+                <p>Email: danielwilson@example.com</p>
+                <p>Age: 33</p>
+                <p>Location: New York</p>
+                <p>Job: Financial Analyst</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Isabella Thompson</span></h3>
+                <p>Email: isabellathompson@example.com</p>
+                <p>Age: 26</p>
+                <p>Location: Los Angeles</p>
+                <p>Job: Graphic Designer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Noah Walker</span></h3>
+                <p>Email: noahwalker@example.com</p>
+                <p>Age: 30</p>
+                <p>Location: San Francisco</p>
+                <p>Job: Product Manager</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Mia Anderson</span></h3>
+                <p>Email: miaanderson@example.com</p>
+                <p>Age: 28</p>
+                <p>Location: Seattle</p>
+                <p>Job: Data Scientist</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>William Roberts</span></h3>
+                <p>Email: williamroberts@example.com</p>
+                <p>Age: 32</p>
+                <p>Location: Toronto</p>
+                <p>Job: Software Developer</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+              <div class="candidate-card">
+                <h3>Name: <span>Sophia Hernandez</span></h3>
+                <p>Email: sophiahernandez@example.com</p>
+                <p>Age: 29</p>
+                <p>Location: Miami</p>
+                <p>Job: Marketing Manager</p>
+                <button class="remove-button" onclick="removeCandidate(this)">Remove</button>
+              </div>
+        </div>
+      </section>
+
+      <script>
+        const searchInput = document.getElementById('search');
+        const candidateCards = document.querySelectorAll('.candidate-card');
+        const notFoundMessage = document.getElementById('notFoundMessage');
+       
+        searchInput.addEventListener('keydown', function(event){
+            if (event.key === 'Enter'){
+            event.preventDefault();
+            searchCandidates();
+            }
+        });
+        searchInput.addEventListener('input', searchCandidates);
+       
+        function searchCandidates() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        let candidateFound = false;
+       
+        candidateCards.forEach(card => {
+           const name = card.querySelector('h3 span').textContent.toLowerCase();
+            if (name.includes(searchTerm)) {
+            card.style.display = 'block';
+            candidateFound = true;
+            } 
+            else{
+             card.style.display = 'none';
+            }
+        });
+       
+            if(!candidateFound){
+            notFoundMessage.style.display = 'block';
+            } 
+            else{
+            notFoundMessage.style.display = 'none';
+            }
+        }
+        </script>
+        <script>
+            function removeCandidate(button) {
+  const card = button.parentNode;
+  card.remove();
+}
+
+        </script>
+</body>
+
+
+</html>

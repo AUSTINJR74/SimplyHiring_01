@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+      /*body background css*/
+      .signup-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        /* background-color: #f0f0f0; */
+        border-radius: 5px;
+      }
+
+      .signup-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid #888;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus,
+      input:valid {
+        border-color: #4caf50;
+      }
+
+      label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.3s ease;
+        color: #888;
+      }
+
+      input:focus + label,
+      input:valid + label,
+      .form-group:hover label {
+        top: 0;
+        font-size: 12px;
+        color: #4caf50;
+      }
+
+      button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .or-divider {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-login {
+  text-align: center;
+}
+
+.social-login a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.social-login a:hover {
+  background-color: #f0f0f0;
+}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+    </style>
+  </head>
+  <body>
+    <div class="signup-form">
+      <h2>Create an Account</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" id="fullname" required />
+          <label for="fullname">Full Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" required />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="phnum" required />
+          <label for="phnum">Phone Number</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" required />
+          <label for="password">Password</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" required />
+          <label for="password">Confirm Password</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="location" required />
+          <label for="location">Location</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="job" required />
+          <label for="job">Desired Job Role/Position</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="work" required />
+          <label for="work">Work Experience</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="edu" required />
+          <label for="edu">Education/Qualifications</label>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <div class="or-divider">Or Sign Up With</div>
+      <div class="social-login">
+        <a href="#" class="google"><i class="fab fa-google"></i> Google</a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+    
+  </body>
+</html>
